@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project source="Logisim" version="2.16.1">
+  <circuit name="main">
+
+    <!-- Input pins -->
+    <comp lib="0" name="Pin" x="100" y="120">
+      <a name="label" val="A"/>
+      <a name="output" val="false"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="100" y="160">
+      <a name="label" val="B"/>
+      <a name="output" val="false"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="100" y="200">
+      <a name="label" val="C"/>
+      <a name="output" val="false"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="100" y="240">
+      <a name="label" val="D"/>
+      <a name="output" val="false"/>
+    </comp>
+
+    <!-- ROM-based decoder -->
+    <comp lib="3" name="ROM" x="350" y="170">
+      <a name="addrWidth" val="4"/>
+      <a name="dataWidth" val="7"/>
+      <a name="contents">
+0000000
+1111001
+0100100
+0110000
+0011001
+0010010
+0000010
+1111000
+0000000
+0010000
+0001000
+0000011
+1000110
+0100001
+0000110
+0001110
+      </a>
+    </comp>
+
+    <!-- Wiring inputs to ROM -->
+    <wire from="(140,120)" to="(350,120)"/>
+    <wire from="(140,160)" to="(350,140)"/>
+    <wire from="(140,200)" to="(350,160)"/>
+    <wire from="(140,240)" to="(350,180)"/>
+
+    <!-- Output pins -->
+    <comp lib="0" name="Pin" x="650" y="100">
+      <a name="label" val="a"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="140">
+      <a name="label" val="b"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="180">
+      <a name="label" val="c"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="220">
+      <a name="label" val="d"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="260">
+      <a name="label" val="e"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="300">
+      <a name="label" val="f"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <comp lib="0" name="Pin" x="650" y="340">
+      <a name="label" val="g"/>
+      <a name="output" val="true"/>
+    </comp>
+
+    <!-- Wiring ROM outputs -->
+    <wire from="(390,170)" to="(650,100)"/>
+    <wire from="(390,180)" to="(650,140)"/>
+    <wire from="(390,190)" to="(650,180)"/>
+    <wire from="(390,200)" to="(650,220)"/>
+    <wire from="(390,210)" to="(650,260)"/>
+    <wire from="(390,220)" to="(650,300)"/>
+    <wire from="(390,230)" to="(650,340)"/>
+
+  </circuit>
+</project>
